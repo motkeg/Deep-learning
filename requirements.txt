@@ -1,0 +1,6 @@
+tensorflow
+Pillow
+matplotlib
+pandas
+tflearn
+
