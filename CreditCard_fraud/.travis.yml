@@ -7,5 +7,5 @@ before_install:
   - pip install --upgrade pip
 
 install: "pip install -r requirements.txt"
-script:  "python nn_model.py"
+script:  "python load_net.py"
 
