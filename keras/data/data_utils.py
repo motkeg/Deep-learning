@@ -61,7 +61,7 @@ def get_df():
 
 
 def export_model_to_GCP(name , inputs , outputs , sess):
-    model_builder = tf.saved_model.builder.SavedModelBuilder(name)
+    model_builder = tf.saved_model.builder.SavedModelBuilder('export/'+name)
 
     inputs = {"inputs": tf.saved_model.utils.build_tensor_info(inputs)}
     outputs = {'earnings': tf.saved_model.utils.build_tensor_info(outputs)}

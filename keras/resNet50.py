@@ -12,7 +12,7 @@ model = ResNet50()
 
 
 # you can use any jpg image you want, you need to resize it to 224x224.
-img = image.load_img('data/bay.jpg' , target_size=(224,224))
+img = image.load_img('./data/bay.jpg' , target_size=(224,224))
 
 x = image.img_to_array(img)
 # addind extra dimention to feed the net
