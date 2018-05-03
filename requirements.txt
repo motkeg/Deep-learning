@@ -3,4 +3,6 @@ Pillow
 matplotlib
 pandas
 tflearn
+sklearn
+h5py
 
