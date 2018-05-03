@@ -1,11 +1,11 @@
 language: python
 cache: pip
 python:
-  - "3.5"
+  - "3.6"
 
 before_install:
   - pip install --upgrade pip
 
 install: "pip install -r requirements.txt"
-script:  "python CreditCard_fraud/load_net.py"
+script:  "python keras/resNet50.py"
 
