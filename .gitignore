@@ -101,6 +101,8 @@ ENV/
 .mypy_cache/
 .idea/
 .vscode/
+keras/export/
+keras/ml-credentials.json
 !/logs/
 /mnist/
 /logs/
