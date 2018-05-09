@@ -1,12 +1,12 @@
 # how to use with the model on GCP:
 
 
-### prerequisites"
+### prerequisites:
 * you need the google cloud SDK install on your machine first.
 * uncomment the lines in `resNet50.py` and run it.
 
 
-create new bucket:
+create new bucket:  
 `gsutil mb -l <region> gs://[your-bucket-name]`
 
 copy local files to the bucket:  
