@@ -14,6 +14,6 @@ RUN pip install tf-nightly-gpu
 EXPOSE 6006
 # Checkout tensorflow/models at HEAD
 RUN git clone https://github.com/tensorflow/models.git /tensorflow_models
-RUN git clone https://github.com/motkeg/Msc-Project.git
+RUN git clone https://github.com/motkeg/Deep-learning.git
 
-WORKDIR /Msc-Project
+WORKDIR /Deep-learning

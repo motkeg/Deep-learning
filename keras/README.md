@@ -1,4 +1,4 @@
-# how to use with the model on GCP:
+# how to use the model on GCP:
 
 
 ### prerequisites:

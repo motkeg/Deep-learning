@@ -27,6 +27,15 @@ x = np.expand_dims(x , axis=0)
 #                                 model.output,  
 #                                 keras.backend.get_session())
 #Image._show(img)
+
+
+## uncomment this only if you want save the model localy
+
+# model.save('keras/models/resnet.h5')
+# print("model saved in 'models' folder...")
+
+# #model = load_model('models/resnet.h5')
+###################################################33
 predictions = model.predict(x)
 decoded_pred = decode_predictions(predictions)
 
