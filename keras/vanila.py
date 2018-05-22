@@ -7,7 +7,7 @@ from tensorflow.python import keras
 from tensorflow.python.keras.models import Sequential , load_model # model type
 from tensorflow.python.keras.layers import Dense ,Conv2D , Flatten # layers type
 
-train,test = data_utils.Create_scale_data_files('data/train.csv', 'data/test.csv',True) # create scale dtda files
+train,test = data_utils.Create_scale_data_files('keras/data/train.csv', 'keras/data/test.csv',True) # create scale dtda files
 #train , test = data_utils.get_df() # get dataFrame from 'data_utils'
 
 X = train.drop('total_earnings' , axis=1)
