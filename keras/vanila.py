@@ -1,13 +1,20 @@
 import numpy as np
 import pandas as pd
 import tensorflow as tf
+import sys
+
 
 from data import data_utils
 from tensorflow.python import keras
 from tensorflow.python.keras.models import Sequential , load_model # model type
 from tensorflow.python.keras.layers import Dense ,Conv2D , Flatten # layers type
 
-train,test = data_utils.Create_scale_data_files('keras/data/train.csv', 'keras/data/test.csv',True) # create scale dtda files
+
+#VERSION = sys.argv[1] if (sys.argv[1]) else ""
+
+
+
+train,test = data_utils.Create_scale_data_files('keras/data/train.csv', 'keras/data/test.csv',True) # create scale data files
 #train , test = data_utils.get_df() # get dataFrame from 'data_utils'
 
 X = train.drop('total_earnings' , axis=1)
@@ -27,7 +34,7 @@ model.add(Dense(1,name='Output'))
 model.compile(loss='mse' , optimizer='adam',metrics=['accuracy'])
 
 # make a logger to use with tensorboard
-tensorboard = keras.callbacks.TensorBoard(log_dir='logs/vanila',
+tensorboard = keras.callbacks.TensorBoard(log_dir='keras/logs/vanila',
                                           write_graph=True,
                                           histogram_freq=5,
                                           write_images=True)
@@ -42,7 +49,7 @@ model.fit(X , y,
 #model = load_model('models/vanila.h5')
 
 #export model to use on GCP
-data_utils.export_model_to_GCP('vanila_ext' ,
+data_utils.export_model_to_GCP('vanila_ext'  ,
                                 model.input,
                                 model.output,
                                 keras.backend.get_session())

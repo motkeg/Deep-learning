@@ -1,5 +1,7 @@
 import pandas as pd
 import os
+import shutil
+
 import tensorflow as tf
 from sklearn.preprocessing import MinMaxScaler
 
@@ -61,6 +63,10 @@ def get_df():
 
 
 def export_model_to_GCP(name , inputs , outputs , sess):
+    
+    if os.path.isdir('keras/export/'+name):
+        shutil.rmtree('keras/export/'+name)
+
     model_builder = tf.saved_model.builder.SavedModelBuilder('keras/export/'+name)
 
     inputs = {"inputs": tf.saved_model.utils.build_tensor_info(inputs)}
