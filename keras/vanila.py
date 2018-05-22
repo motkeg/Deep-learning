@@ -51,7 +51,7 @@ error_rate = model.evaluate(X_test,y_test)
 print("MSE: " ,error_rate)
 
 # save model
-model.save('models/vanila.h5')
+model.save('keras/models/vanila.h5')
 print("model saved in 'models' folder...")
 
 
