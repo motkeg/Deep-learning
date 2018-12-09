@@ -62,7 +62,7 @@ def get_df():
         return False
 
 
-def export_model_to_GCP(name , inputs , outputs , sess):
+def export_to_GCP(name , inputs , outputs , sess):
     
     if os.path.isdir('keras/export/'+name):
         shutil.rmtree('keras/export/'+name)

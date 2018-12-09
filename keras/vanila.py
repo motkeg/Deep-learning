@@ -49,7 +49,7 @@ model.fit(X , y,
 #model = load_model('models/vanila.h5')
 
 #export model to use on GCP
-data_utils.export_model_to_GCP('vanila_ext'  ,
+data_utils.export_to_GCP('vanila_ext'  ,
                                 model.input,
                                 model.output,
                                 keras.backend.get_session())
@@ -63,7 +63,6 @@ print("model saved in 'models' folder...")
 
 
 # predict = model.predict(?)
-
 
 
 
