@@ -5,5 +5,5 @@ pandas
 tflearn
 sklearn
 scipy
-h5py
+
 
